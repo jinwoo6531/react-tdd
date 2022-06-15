@@ -8,6 +8,8 @@ import Navbar from './components/navbar';
 const App = ({ presenter }) => {
   const [habits, setHabits] = useState(presenter.getHabits());
 
+  
+
   const handleIncrement = useCallback(habit => {
     presenter.increment(habit, setHabits);
     
@@ -21,7 +23,7 @@ const App = ({ presenter }) => {
     presenter.delete(habit, setHabits);
   }, []);
 
-  const handleAdd = useCallback(name => {
+  const handleAdd = useCallback(name => { 
     presenter.add(name, setHabits);
   }, []);
 
